@@ -13,7 +13,7 @@ output() {
   printf "\033[0m"
 }
 
-git clone https://github.com/bcit-ci/CodeIgniter.git ci
+git clone https://github.com/mikroheart/CodeIgniter.git ci
 sed -i.bak -e "s/\.\.\//\.\/ci/g" docker-compose.yml
 output "Start container."
 docker-compose -p ${PROJECT} build
